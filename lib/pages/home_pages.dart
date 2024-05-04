@@ -42,7 +42,7 @@ class _HomeState extends State<Home> {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           IconButton(
-                            icon: Icon(Icons.edit),
+                            icon: const Icon(Icons.edit),
                             onPressed: () async {
                               await Navigator.pushNamed(context, "/edit",
                                   arguments: {
@@ -55,7 +55,7 @@ class _HomeState extends State<Home> {
                             },
                           ),
                           IconButton(
-                            icon: Icon(Icons.delete),
+                            icon: const Icon(Icons.delete),
                             onPressed: () async {
                               bool result = await showDialog(
                                 context: context,
@@ -74,6 +74,7 @@ class _HomeState extends State<Home> {
                                         onPressed: () async {
                                           await deletePeople(
                                               snapshot.data?[index]['uid']);
+                                          // ignore: use_build_context_synchronously
                                           Navigator.pop(context, true);
                                         },
                                         child: const Text("Eliminar"),

@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 //import de Firebase
 import 'package:firebase_core/firebase_core.dart';
